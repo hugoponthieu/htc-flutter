@@ -1,0 +1,184 @@
+{
+    "restaurants":[
+        {
+            "id": 1,
+            "url": "https://www.crous-montpellier.fr/restaurant/brasserie-boutonnet/",
+            "name": "Brasserie Boutonnet",
+            "gps_coord": {
+                "X": 43.623477935791016,
+                "Y": 3.8692851066589355
+            }
+        },
+        {
+            "id": 2,
+            "url": "https://www.crous-montpellier.fr/restaurant/brasserie-odontologie/",
+            "name": "Brasserie Le Graella.",
+            "gps_coord": {
+                "X": 42.68181228637695,
+                "Y": 2.9019463062286377
+            }
+        },
+        {
+            "id": 3,
+            "url": "https://www.crous-montpellier.fr/restaurant/brasserie-triolet/",
+            "name": "Brasserie Triolet",
+            "gps_coord": {
+                "X": 43.63213348388672,
+                "Y": 3.856411933898926
+            }
+        },
+        {
+            "id": 4,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-boutonnet/",
+            "name": "Cafet’ Boutonnet",
+            "gps_coord": {
+                "X": 43.623416900634766,
+                "Y": 3.869405746459961
+            }
+        },
+        {
+            "id": 5,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-campus/",
+            "name": "Cafet’ Campus",
+            "gps_coord": {
+                "X": 43.634952545166016,
+                "Y": 3.8707640171051025
+            }
+        },
+        {
+            "id": 6,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-chimie/",
+            "name": "Cafet’ Chimie",
+            "gps_coord": {
+                "X": 43.63563537597656,
+                "Y": 3.8663041591644287
+            }
+        },
+        {
+            "id": 7,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-droit/",
+            "name": "Cafet’ Droit",
+            "gps_coord": {
+                "X": 43.61311721801758,
+                "Y": 3.876904010772705
+            }
+        },
+        {
+            "id": 8,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-fde/",
+            "name": "Cafet’ FDE",
+            "gps_coord": {
+                "X": 43.6198616027832,
+                "Y": 3.8692409992218018
+            }
+        },
+        {
+            "id": 9,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-medecine/",
+            "name": "Cafet’ Médecine",
+            "gps_coord": {
+                "X": 43.632591247558594,
+                "Y": 3.8513996601104736
+            }
+        },
+        {
+            "id": 10,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-passerelle/",
+            "name": "Cafet’ Passerelle",
+            "gps_coord": {
+                "X": 43.63689041137695,
+                "Y": 3.8546550273895264
+            }
+        },
+        {
+            "id": 11,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-paul-valery-um3/",
+            "name": "Cafet’ Paul Valéry (UM3)",
+            "gps_coord": {
+                "X": 43.63095474243164,
+                "Y": 3.8700900077819824
+            }
+        },
+        {
+            "id": 12,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-richter/",
+            "name": "Cafet’ Richter",
+            "gps_coord": {
+                "X": 43.60299301147461,
+                "Y": 3.8989596366882324
+            }
+        },
+        {
+            "id": 13,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-space/",
+            "name": "Cafet’ (S)PACE",
+            "gps_coord": {
+                "X": 43.63150405883789,
+                "Y": 3.8606019020080566
+            }
+        },
+        {
+            "id": 14,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-st-charles/",
+            "name": "Cafet’ St Charles",
+            "gps_coord": {
+                "X": 43.615997314453125,
+                "Y": 3.871776580810547
+            }
+        },
+        {
+            "id": 15,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-staps/",
+            "name": "Cafet’ Staps",
+            "gps_coord": {
+                "X": 43.63884735107422,
+                "Y": 3.848205089569092
+            }
+        },
+        {
+            "id": 16,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-sudalternance/",
+            "name": "Cafet’ Sudalternance",
+            "gps_coord": {
+                "X": 43.63676452636719,
+                "Y": 3.851896047592163
+            }
+        },
+        {
+            "id": 17,
+            "url": "https://www.crous-montpellier.fr/restaurant/cafet-trioletto/",
+            "name": "Cafet’ Trioletto",
+            "gps_coord": {
+                "X": 43.62940979003906,
+                "Y": 3.860416889190674
+            }
+        },
+        {
+            "id": 18,
+            "url": "https://www.crous-montpellier.fr/restaurant/resto-u-richter/",
+            "name": "Resto U’ Richter",
+            "gps_coord": {
+                "X": 43.60299301147461,
+                "Y": 3.8989596366882324
+            }
+        },
+        {
+            "id": 19,
+            "url": "https://www.crous-montpellier.fr/restaurant/resto-u-triolet/",
+            "name": "Resto U’ Triolet",
+            "gps_coord": {
+                "X": 43.630882263183594,
+                "Y": 3.860473871231079
+            }
+        },
+        {
+            "id": 20,
+            "url": "https://www.crous-montpellier.fr/restaurant/resto-u-vert-bois/",
+            "name": "Resto U’ Vert-Bois",
+            "gps_coord": {
+                "X": 43.63493728637695,
+                "Y": 3.870628833770752
+            }
+        }
+    ]
+}
