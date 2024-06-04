@@ -5,7 +5,7 @@ import 'package:htc_flutter/models/restaurant.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository.dart';
 
 class RestaurantsRepositoryMock implements RestaurantsRepository {
-  final jsonFilePath = 'assets/json/restaurants.json';
+  final jsonFilePath = 'json/restaurants.json';
   final resource = 'restaurants';
   final List<Restaurant> restaurants = [];
   Future _fillList() async {
@@ -16,7 +16,7 @@ class RestaurantsRepositoryMock implements RestaurantsRepository {
 
       items = data[resource];
       for (var restaurant in items) {
-        restaurants.add(restaurant);
+        restaurants.add(Restaurant.fromMap(restaurant));
       }
     }
   }
