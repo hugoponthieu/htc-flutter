@@ -10,6 +10,12 @@ class HackTheCrousApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hack The Crous',
       theme: ThemeData(
+        expansionTileTheme: const ExpansionTileThemeData(
+            iconColor: Colors.white, collapsedIconColor: Colors.white),
+        splashColor: const Color.fromARGB(255, 30, 30, 30),
+        listTileTheme: const ListTileThemeData(
+          titleTextStyle: bodyMediumStyle,
+        ),
         textTheme: const TextTheme(
             bodyLarge: bodyLargeStyle,
             bodyMedium: bodyMediumStyle,
@@ -24,5 +30,3 @@ class HackTheCrousApp extends StatelessWidget {
     );
   }
 }
-
-
