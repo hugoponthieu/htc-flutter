@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:htc_flutter/widgets/restaurant_card.dart';
 
 class StoryScreen extends StatefulWidget {
   const StoryScreen({super.key});
@@ -26,6 +27,11 @@ class _StoryScreenState extends State<StoryScreen> {
             ),
             const Card(
               child: Row(children: [Text("test")]),
+            ),
+            RestaurantCard(
+              navigateToDetail: (int id) {
+                print(id);
+              },
             )
           ],
         ),
