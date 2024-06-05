@@ -11,6 +11,6 @@ class Restaurant {
     id = data["id"] ?? 0;
     url = data["url"] ?? "";
     name = data["name"] ?? name;
-    gpsCoord = GpsCoord.fromMap(data["gps_coord"]);
+    gpsCoord = GpsCoord.fromMap(data["gps_coord"]);                                                     
   }
 }

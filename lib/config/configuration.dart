@@ -1,6 +1,9 @@
+import 'package:htc_flutter/repository/meals/meals_repository.dart';
+import 'package:htc_flutter/repository/meals/meals_repository_mock.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository_mock.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository_web.dart';
+import 'package:htc_flutter/services/meal_service.dart';
 import 'package:htc_flutter/services/restaurant_service.dart';
 
 class Configuration {
@@ -8,9 +11,11 @@ class Configuration {
 
   // Repositories
   static late RestaurantsRepository restaurantsRepository;
+  static late MealsRepository mealsRepository;
 
   //Services
   static late RestaurantService restaurantService;
+  static late MealService mealService;
 
   void init(String? appEnv) {
     envName = appEnv ?? 'mock';
@@ -26,6 +31,7 @@ class Configuration {
 
   void _useMockRepositories() {
     restaurantsRepository = RestaurantsRepositoryMock();
+    mealsRepository = MealsRepositoryMock();
   }
 
   void _useWebRepositories() {
@@ -35,5 +41,7 @@ class Configuration {
   void _useServices() {
     restaurantService =
         RestaurantService(restaurantsRepository: restaurantsRepository);
+    mealService = MealService(mealsRepository: mealsRepository);
+        
   }
 }

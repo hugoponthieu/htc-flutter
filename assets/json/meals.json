@@ -1,0 +1,199 @@
+{
+  "meals": [
+    {
+      "id": 1,
+      "meals": [
+        {
+          "ID": 948,
+          "Type": "Petit déjeuner",
+          "Foodies": [
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 viennoiserie",
+                "+ 1 jus d'orange ou 1 yaourt",
+                "Tarif : 2.15 TTC (1.95 € HT)"
+              ],
+              "type": "Formule petit déjeuner"
+            },
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 viennoiserie",
+                "+ 1 jus d'orange ",
+                "+ 1 yaourt",
+                "+ 1 compote",
+                "Tarif : 3.19 TTC (2.90 € HT)",
+                "HAPPY HOUR",
+                "Tous les jours de 7h30 à 8h30, le petit dej' gourmand au prix du petit dej' classique ! (soit 2.15 TTC)"
+              ],
+              "type": "Formule petit déjeuner gourmand"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        },
+        {
+          "ID": 949,
+          "Type": "Déjeuner",
+          "Foodies": [
+            {
+              "content": ["menu non communiqué"],
+              "type": "Grill"
+            },
+            {
+              "content": ["Lardons", "Bolognaise"],
+              "type": "Pizza"
+            },
+            {
+              "content": ["2 Fromages (en formule) 2.95 HT"],
+              "type": "Panini"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        },
+        {
+          "ID": 950,
+          "Type": "Dîner",
+          "Foodies": [
+            {
+              "content": ["menu non communiqué"],
+              "type": "Grill"
+            },
+            {
+              "content": ["Margherita"],
+              "type": "Pizza"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "meals": [
+        {
+          "ID": 947,
+          "Type": "Déjeuner",
+          "Foodies": [
+            {
+              "content": [
+                "Pané de blé fromage et épinards",
+                "(plat végétarien)",
+                "Ou porc au caramel",
+                "Ou cuisse de poulet sauce basquaise",
+                "***",
+                "Frites",
+                "Pommes de terre au four",
+                "Duo de courgettes"
+              ],
+              "type": "Brasserie"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "meals": [
+        {
+          "ID": 951,
+          "Type": "Petit déjeuner",
+          "Foodies": [
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 viennoiserie",
+                "+ 1 jus d'orange ou 1 yaourt",
+                "Tarif : 2.15 TTC (1.95 € HT)"
+              ],
+              "type": "Formule petit déjeuner"
+            },
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 viennoiserie",
+                "+ 1 jus d'orange ",
+                "+ 1 yaourt",
+                "+ 1 compote",
+                "Tarif : 3.19 TTC (2.90 € HT)",
+                "HAPPY HOUR",
+                "Tous les jours de 7h30 à 8h30, le petit dej' gourmand au prix du petit dej' classique ! (soit 2.15 TTC)"
+              ],
+              "type": "Formule petit déjeuner gourmand"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        },
+        {
+          "ID": 952,
+          "Type": "Dîner",
+          "Foodies": [
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 brownie ou 1 cookie ou 1 donut sucré",
+                "Tarif : 2.15 TTC (1.95 € HT)",
+                "HAPPY HOUR",
+                "Tous les jours de 15h30 à 16h30, 1 compote offerte dans votre formule goûter !"
+              ],
+              "type": "Formule goûter"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "meals": [
+        {
+          "ID": 955,
+          "Type": "Petit déjeuner",
+          "Foodies": [
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 viennoiserie",
+                "+ 1 jus d'orange ou 1 yaourt",
+                "Tarif : 2.15 TTC (1.95 € HT)"
+              ],
+              "type": "Formule petit déjeuner"
+            },
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 viennoiserie",
+                "+ 1 jus d'orange ",
+                "+ 1 yaourt",
+                "+ 1 compote",
+                "Tarif : 3.19 TTC (2.90 € HT)",
+                "HAPPY HOUR",
+                "Tous les jours de 7h30 à 8h30, le petit dej' gourmand au prix du petit dej' classique ! (soit 2.15 TTC)"
+              ],
+              "type": "Formule petit déjeuner gourmand"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        },
+        {
+          "ID": 956,
+          "Type": "Dîner",
+          "Foodies": [
+            {
+              "content": [
+                "1 boisson chaude (café, thé, chocolat)",
+                "+ 1 brownie ou 1 cookie ou 1 donut sucré",
+                "Tarif : 2.15 TTC (1.95 € HT)",
+                "HAPPY HOUR",
+                "Tous les jours de 15h30 à 16h30, 1 compote offerte dans votre formule goûter !"
+              ],
+              "type": "Formule goûter"
+            }
+          ],
+          "Day": "2024-06-05T00:00:00Z"
+        }
+      ]
+    }
+  ]
+}
