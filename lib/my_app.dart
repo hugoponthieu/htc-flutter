@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:htc_flutter/config/configuration.dart';
+import 'package:htc_flutter/models/meal.dart';
 import 'package:htc_flutter/models/restaurant.dart';
 
 class MyApp extends StatelessWidget {
@@ -30,10 +30,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   late Future<Restaurant?> futureRestaurant;
+  late Future<List<Meal>?> futureMeals;
   @override
   void initState() {
-    futureRestaurant = Configuration.restaurantService.getOne(1);
-    futureRestaurant.then((value) => print("value:${value!.name}"));
     super.initState();
   }
 
