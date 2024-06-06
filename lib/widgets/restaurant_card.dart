@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:htc_flutter/models/meal.dart';
+import 'package:htc_flutter/models/restaurant.dart';
 import 'package:htc_flutter/themes/text_theme.dart';
 import 'package:htc_flutter/widgets/arrow_button.dart';
 
+
 class RestaurantCard extends StatelessWidget {
   final void Function(int) navigateToDetail;
-  final List<Meal> meals;
-  final String restaurantName;
+  final Future<List<Meal>?> Function(int id) getRestaurantMeals;
+  final Future<List<Meal>?> futureMeals;
+  final Restaurant restaurant;
   final ExpansionTileController tileController;
   final List<ExpansionTileController> tileControllers;
   RestaurantCard(
       {super.key,
       required this.navigateToDetail,
-      required this.meals,
-      required this.restaurantName})
-      : tileControllers =
+      required this.restaurant,
+      required this.getRestaurantMeals})
+      : futureMeals = getRestaurantMeals(restaurant.id),
+        tileControllers =
             List.generate(meals.length, (index) => ExpansionTileController()),
         tileController = ExpansionTileController();
   @override
@@ -49,7 +53,7 @@ class RestaurantCard extends StatelessWidget {
   Widget restaurantTopTile(void Function(int) navigateToDetail) {
     return ListTile(
       title: Text(
-        restaurantName,
+        restaurant.name,
         style: bodyLargeStyle,
       ),
       trailing: ArrowButton(onTap: () => navigateToDetail(1)),
@@ -95,3 +99,4 @@ class RestaurantCard extends StatelessWidget {
     ];
   }
 }
+
