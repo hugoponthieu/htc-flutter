@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:htc_flutter/config/configuration.dart';
 import 'package:htc_flutter/models/meal.dart';
-import 'package:htc_flutter/widgets/restaurant_card.dart';
 
 class StoryScreen extends StatefulWidget {
   const StoryScreen({super.key});
@@ -32,21 +31,21 @@ class _StoryScreenState extends State<StoryScreen> {
             const Card(
               child: Row(children: [Text("test")]),
             ),
-            FutureBuilder(
-              future: futureMeals,
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return RestaurantCard(
-                    navigateToDetail: (int id) {
-                      print(id);
-                    },
-                    meals: snapshot.data!,
-                  ) as Widget;
-                } else {
-                  return SizedBox();
-                }
-              },
-            )
+            // FutureBuilder(
+            //   future: futureMeals,
+            //   builder: (context, snapshot) {
+            //     if (snapshot.hasData) {
+            //       return RestaurantCard(
+            //         navigateToDetail: (int id) {
+            //           print(id);
+            //         },
+            //         meals: snapshot.data!,
+            //       ) as Widget;
+            //     } else {
+            //       return SizedBox();
+            //     }
+            //   },
+            // )
           ],
         ),
       ),
