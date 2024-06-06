@@ -41,7 +41,7 @@ class _StoryScreenState extends State<StoryScreen> {
                       print(id);
                     },
                     meals: snapshot.data!,
-                  );
+                  ) as Widget;
                 } else {
                   return SizedBox();
                 }
