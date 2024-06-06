@@ -3,16 +3,20 @@ import 'package:htc_flutter/models/meal.dart';
 import 'package:htc_flutter/themes/text_theme.dart';
 import 'package:htc_flutter/widgets/arrow_button.dart';
 
-// ignore: must_be_immutable
 class RestaurantCard extends StatelessWidget {
   final void Function(int) navigateToDetail;
   final List<Meal> meals;
+  final String restaurantName;
+  final ExpansionTileController tileController;
+  final List<ExpansionTileController> tileControllers;
   RestaurantCard(
-      {super.key, required this.navigateToDetail, required this.meals})
+      {super.key,
+      required this.navigateToDetail,
+      required this.meals,
+      required this.restaurantName})
       : tileControllers =
-            List.generate(meals.length, (index) => ExpansionTileController());
-  ExpansionTileController tileController = ExpansionTileController();
-  List<ExpansionTileController> tileControllers = [];
+            List.generate(meals.length, (index) => ExpansionTileController()),
+        tileController = ExpansionTileController();
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -37,15 +41,15 @@ class RestaurantCard extends StatelessWidget {
   void collapseAllTiles(int controllerKey) {
     for (var entry in tileControllers.asMap().entries) {
       if (entry.key != controllerKey) {
-        entry.value.collapse();
+        if (entry.value.isExpanded) entry.value.collapse();
       }
     }
   }
 
   Widget restaurantTopTile(void Function(int) navigateToDetail) {
     return ListTile(
-      title: const Text(
-        "test",
+      title: Text(
+        restaurantName,
         style: bodyLargeStyle,
       ),
       trailing: ArrowButton(onTap: () => navigateToDetail(1)),

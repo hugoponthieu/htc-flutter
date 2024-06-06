@@ -5,12 +5,12 @@ class RestaurantService {
   late RestaurantsRepository restaurantsRepository;
 
   RestaurantService({required this.restaurantsRepository});
-  
+
   Future<Restaurant?> getOne(int id) {
     return restaurantsRepository.getOne(id);
   }
 
-  Future<List<Restaurant>?> getAll(int id) {
+  Future<List<Restaurant>?> getAll() {
     return restaurantsRepository.getAll();
   }
 }
