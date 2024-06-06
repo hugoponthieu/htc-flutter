@@ -19,7 +19,7 @@ class RestaurantCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          restaurantTopTile(navigateToDetail, context),
+          restaurantTopTile(navigateToDetail),
           Container(
               constraints: const BoxConstraints.tightFor(width: 300),
               child: Column(
@@ -42,12 +42,11 @@ class RestaurantCard extends StatelessWidget {
     }
   }
 
-  Widget restaurantTopTile(
-      void Function(int) navigateToDetail, BuildContext context) {
+  Widget restaurantTopTile(void Function(int) navigateToDetail) {
     return ListTile(
-      title: Text(
+      title: const Text(
         "test",
-        style: Theme.of(context).textTheme.bodyLarge,
+        style: bodyLargeStyle,
       ),
       trailing: ArrowButton(onTap: () => navigateToDetail(1)),
       onTap: () => navigateToDetail(1),
@@ -63,7 +62,6 @@ class RestaurantCard extends StatelessWidget {
         },
         maintainState: true,
         controlAffinity: ListTileControlAffinity.trailing,
-        shape: Border.all(color: const Color.fromARGB(0, 0, 0, 0)),
         title: Text(meal.type, style: bodyMediumStyle),
         children: foodyDisplay(meal));
   }

@@ -23,6 +23,16 @@ class _HomeRestaurantScreenState extends State<HomeRestaurantScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: searchAppBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.local_dining_rounded),
+            label: "Pouette",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.local_dining_rounded), label: "Pouette")
+        ],
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -37,7 +47,7 @@ class _HomeRestaurantScreenState extends State<HomeRestaurantScreen> {
                   meals: snapshot.data!,
                 ) as Widget;
               } else {
-                return SizedBox();
+                return const SizedBox();
               }
             },
           )
