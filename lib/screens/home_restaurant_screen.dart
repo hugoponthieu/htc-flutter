@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:htc_flutter/config/configuration.dart';
 import 'package:htc_flutter/models/meal.dart';
+import 'package:htc_flutter/widgets/future_restaurants_card_list.dart';
 import 'package:htc_flutter/widgets/logo.dart';
-import 'package:htc_flutter/widgets/restaurant_card.dart';
 
 import '../models/restaurant.dart';
 
@@ -37,36 +37,10 @@ class _HomeRestaurantScreenState extends State<HomeRestaurantScreen> {
                 icon: Icon(Icons.local_dining_rounded), label: "Pouette")
           ],
         ),
-        body: FutureBuilder(
-          future: futureRestaurant,
-          builder: (context, snapshot) {
-            if (snapshot.hasError) {
-              return Text("data");
-            }
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-            if (snapshot.hasData) {
-              return ListView.builder(
-                itemCount: snapshot.data!.length,
-                itemBuilder: (context, index) {
-                  return RestaurantCard(
-                    navigateToDetail: (int id) {
-                      print(id);
-                    },
-                    meals: [],
-                    restaurantName: snapshot.data![index].name,
-                  );
-                },
-              );
-            } else {
-              return const Text("No data available");
-            }
-          },
-        )
-        );
+        body: FutureRestaurantsCardList(
+          futureRestaurant: futureRestaurant,
+          getRestaurantMeals: Configuration.mealService.getRestaurantMeals,
+        ));
   }
 
   AppBar searchAppBar() {
