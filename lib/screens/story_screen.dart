@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:htc_flutter/config/configuration.dart';
+import 'package:htc_flutter/models/meal.dart';
 import 'package:htc_flutter/widgets/restaurant_card.dart';
 
 class StoryScreen extends StatefulWidget {
@@ -9,8 +11,10 @@ class StoryScreen extends StatefulWidget {
 }
 
 class _StoryScreenState extends State<StoryScreen> {
+  late Future<List<Meal>?> futureMeals;
   @override
   void initState() {
+    futureMeals = Configuration.mealService.getRestaurantMeals(1);
     super.initState();
   }
 
@@ -28,9 +32,19 @@ class _StoryScreenState extends State<StoryScreen> {
             const Card(
               child: Row(children: [Text("test")]),
             ),
-            RestaurantCard(
-              navigateToDetail: (int id) {
-                print(id);
+            FutureBuilder(
+              future: futureMeals,
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  return RestaurantCard(
+                    navigateToDetail: (int id) {
+                      print(id);
+                    },
+                    meals: snapshot.data!,
+                  );
+                } else {
+                  return SizedBox();
+                }
               },
             )
           ],
