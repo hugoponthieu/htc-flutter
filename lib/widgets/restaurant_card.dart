@@ -3,6 +3,7 @@ import 'package:htc_flutter/models/meal.dart';
 import 'package:htc_flutter/themes/text_theme.dart';
 import 'package:htc_flutter/widgets/arrow_button.dart';
 
+// ignore: must_be_immutable
 class RestaurantCard extends StatelessWidget {
   final void Function(int) navigateToDetail;
   final List<Meal> meals;
