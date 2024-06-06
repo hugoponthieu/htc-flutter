@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:htc_flutter/models/meal.dart';
 import 'package:htc_flutter/themes/text_theme.dart';
 import 'package:htc_flutter/widgets/arrow_button.dart';
 
 class RestaurantCard extends StatelessWidget {
   final void Function(int) navigateToDetail;
-  const RestaurantCard({super.key, required this.navigateToDetail});
-
+  final List<Meal> meals;
+  RestaurantCard(
+      {super.key, required this.navigateToDetail, required this.meals})
+      : tileControllers =
+            List.generate(meals.length, (index) => ExpansionTileController());
+  ExpansionTileController tileController = ExpansionTileController();
+  List<ExpansionTileController> tileControllers = [];
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -16,14 +22,23 @@ class RestaurantCard extends StatelessWidget {
           Container(
               constraints: const BoxConstraints.tightFor(width: 300),
               child: Column(
-                children: [
-                  mealExpansionTile(context),
-                  mealExpansionTile(context),
-                ],
-              ))
+                  children: meals
+                      .asMap()
+                      .entries
+                      .map((entry) => mealExpansionTile(
+                          entry.value, tileControllers[entry.key], entry.key))
+                      .toList()))
         ],
       ),
     );
+  }
+
+  void collapseAllTiles(int controllerKey) {
+    for (var entry in tileControllers.asMap().entries) {
+      if (entry.key != controllerKey) {
+        entry.value.collapse();
+      }
+    }
   }
 
   Widget restaurantTopTile(
@@ -38,48 +53,42 @@ class RestaurantCard extends StatelessWidget {
     );
   }
 
-  Widget mealExpansionTile(BuildContext context) {
+  Widget mealExpansionTile(
+      Meal meal, ExpansionTileController tileController, int controllerKey) {
     return ExpansionTile(
-      maintainState: true,
-      controlAffinity: ListTileControlAffinity.trailing,
-      shape: Border.all(color: const Color.fromARGB(0, 0, 0, 0)),
-      title: Text("test", style: Theme.of(context).textTheme.bodyMedium),
-      children: const [
-        Text(
-          "first",
-          style: bodySmallStyle,
-        ),
-        Text(
-          "second",
-          style: bodySmallStyle,
-        )
-      ],
-    );
+        controller: tileController,
+        onExpansionChanged: (value) {
+          if (tileController.isExpanded) collapseAllTiles(controllerKey);
+        },
+        maintainState: true,
+        controlAffinity: ListTileControlAffinity.trailing,
+        shape: Border.all(color: const Color.fromARGB(0, 0, 0, 0)),
+        title: Text(meal.type, style: bodyMediumStyle),
+        children: foodyDisplay(meal));
+  }
+
+  List<Widget> foodyDisplay(Meal meal) {
+    return [
+      ...meal.foodies.map(
+        (foody) {
+          return Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Column(
+              children: [
+                Text(
+                  "--${foody.type}--",
+                  style: bodySmallStyle.copyWith(fontWeight: FontWeight.bold),
+                ),
+                ...foody.content.map(
+                  (food) {
+                    return Text(food, style: bodySmallStyle);
+                  },
+                )
+              ],
+            ),
+          );
+        },
+      )
+    ];
   }
 }
-
-// Test on panel
-
-    // return ExpansionPanelList(
-    //   expansionCallback: (panelIndex, isExpanded) {
-    //     isExpanded = !isExpanded;
-    //   },
-    //   children: [
-    //     ExpansionPanel(
-    //         backgroundColor: const Color.fromARGB(255, 30, 30, 30),
-    //         headerBuilder: (context, isExpanded) {
-    //           return const Row(
-    //             mainAxisSize: MainAxisSize.min,
-    //             children: [Text("test", style: bodyMediumStyle)],
-    //           );
-    //         },
-    //         isExpanded: true,
-    //         canTapOnHeader: true,
-    //         body: const Text("test"))
-    //   ],
-    // );
-    // return ExpansionPanel(
-    //     headerBuilder: (context, isExpanded) {
-    //       return Text("test");
-    //     },
-    //     body: Text("azer"));
