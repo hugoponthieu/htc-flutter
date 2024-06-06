@@ -10,8 +10,17 @@ class HackTheCrousApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hack The Crous',
       theme: ThemeData(
-        expansionTileTheme: const ExpansionTileThemeData(
-            iconColor: Colors.white, collapsedIconColor: Colors.white),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Color.fromARGB(255, 103, 242, 109),
+            unselectedItemColor: Colors.white,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            backgroundColor: Color.fromARGB(255, 30, 30, 30)),
+        expansionTileTheme: ExpansionTileThemeData(
+            shape: Border.all(color: const Color.fromARGB(0, 0, 0, 0)),
+            iconColor: Colors.white,
+            collapsedIconColor: Colors.white),
         splashColor: const Color.fromARGB(255, 30, 30, 30),
         appBarTheme:
             const AppBarTheme(backgroundColor: Color.fromARGB(255, 12, 12, 12)),
