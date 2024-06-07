@@ -22,9 +22,12 @@ class MealsRepositoryMock implements MealsRepository {
   }
 
   @override
-  Future<List<Meal>> getRestaurantMeals(int restaurantId) async {
+  Future<List<Meal>?> getRestaurantMeals(int restaurantId) async {
     await _fillList();
-    return mockedMeals.firstWhere((m) => m.restaurantId == restaurantId).meals;
+    return mockedMeals
+        .firstWhere((m) => m.restaurantId == restaurantId,
+            orElse: () => MockedMeals(-1, []))
+        .meals;
   }
 }
 
