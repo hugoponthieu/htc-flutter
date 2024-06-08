@@ -31,9 +31,7 @@ class FutureRestaurantsCardList extends StatelessWidget {
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
                 return RestaurantCard(
-                  navigateToDetail: (int id) {
-                    print(id);
-                  },
+                  navigateToDetail: (int id) {},
                   restaurant: snapshot.data![index],
                   getRestaurantMeals: getRestaurantMeals,
                 );

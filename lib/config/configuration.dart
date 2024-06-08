@@ -1,5 +1,6 @@
 import 'package:htc_flutter/repository/meals/meals_repository.dart';
 import 'package:htc_flutter/repository/meals/meals_repository_mock.dart';
+import 'package:htc_flutter/repository/meals/meals_repository_web.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository_mock.dart';
 import 'package:htc_flutter/repository/restaurants/restaurants_repository_web.dart';
@@ -36,12 +37,12 @@ class Configuration {
 
   void _useWebRepositories() {
     restaurantsRepository = RestaurantsRepositoryWeb();
+    mealsRepository = MealsRepositoryWeb();
   }
 
   void _useServices() {
     restaurantService =
         RestaurantService(restaurantsRepository: restaurantsRepository);
     mealService = MealService(mealsRepository: mealsRepository);
-        
   }
 }

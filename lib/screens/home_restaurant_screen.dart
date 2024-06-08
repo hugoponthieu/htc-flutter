@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:htc_flutter/config/configuration.dart';
-import 'package:htc_flutter/models/meal.dart';
 import 'package:htc_flutter/widgets/future_restaurants_card_list.dart';
 import 'package:htc_flutter/widgets/logo.dart';
 
@@ -14,11 +13,9 @@ class HomeRestaurantScreen extends StatefulWidget {
 }
 
 class _HomeRestaurantScreenState extends State<HomeRestaurantScreen> {
-  late Future<List<Meal>?> futureMeals;
   late Future<List<Restaurant>?> futureRestaurant;
   @override
   void initState() {
-    futureMeals = Configuration.mealService.getRestaurantMeals(1);
     futureRestaurant = Configuration.restaurantService.getAll();
     super.initState();
   }
