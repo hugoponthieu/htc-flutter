@@ -44,7 +44,6 @@ class ExpansionMealList extends StatelessWidget {
 
   Widget mealExpansionTile(Meal meal,
       List<ExpansionTileController> tileControllers, int controllerKey) {
-    print(meal);
     ExpansionTileController controller = tileControllers[controllerKey];
     return ExpansionTile(
         controller: controller,
