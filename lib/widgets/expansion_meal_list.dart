@@ -16,6 +16,7 @@ class ExpansionMealList extends StatelessWidget {
           tileControllers = List.generate(
               snapshot.data!.length, (index) => ExpansionTileController());
           return Container(
+              margin: const EdgeInsetsDirectional.all(8),
               constraints: const BoxConstraints.tightFor(width: 300),
               child: Column(
                   children: snapshot.data!

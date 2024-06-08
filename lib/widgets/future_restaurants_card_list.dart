@@ -25,17 +25,25 @@ class FutureRestaurantsCardList extends StatelessWidget {
           );
         }
         if (snapshot.hasData) {
-          return ListView.builder(
-            itemCount: snapshot.data!.length,
-            itemBuilder: (context, index) {
-              return RestaurantCard(
-                navigateToDetail: (int id) {
-                  print(id);
-                },
-                restaurant: snapshot.data![index],
-                getRestaurantMeals: getRestaurantMeals,
-              );
-            },
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListView.separated(
+              itemCount: snapshot.data!.length,
+              itemBuilder: (context, index) {
+                return RestaurantCard(
+                  navigateToDetail: (int id) {
+                    print(id);
+                  },
+                  restaurant: snapshot.data![index],
+                  getRestaurantMeals: getRestaurantMeals,
+                );
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return const SizedBox(
+                  height: 4,
+                );
+              },
+            ),
           );
         } else {
           return const Text("No data available");
